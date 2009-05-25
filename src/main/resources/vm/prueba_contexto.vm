@@ -1,0 +1,6 @@
+#foreach($token in $util.getTokens($row.getColumn('J')))
+INSERT INTO T_ESPECIAS_CONF (F_ESPECIAS,A_TEST,F_TEST) VALUES (S_ESCPECIAS.CURRVAL,'$row.getColumn('C')','$token');
+#end
+#foreach($token in $util.getTokens($row.getColumn('I'),';'))
+INSERT INTO T_ESPECIAS_CONF (F_ESPECIAS,A_TEST,F_TEST) VALUES (S_ESCPECIAS.CURRVAL,'$row.getColumn('C')','$token');
+#end

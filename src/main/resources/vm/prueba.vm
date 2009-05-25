@@ -1,0 +1,11 @@
+-- @Started
+#set ($timer = $timerClass.newInstance())
+#foreach($row in $repository.getSheet('Sheet1').getRows())
+#*	*##if ($row.getColumn('G').equalsIgnoreCase('Si'))
+#*		*##set ($subqueryA = "SELECT P_ID FROM DUAL WHERE A_NOMBRE ='$row.getColumn('C')'")
+#*		*#INSERT INTO T_PEPE_TABLA (P_ID,A_NOMBRE,A_DESCRIPCION) VALUES (S_SEQ.NEXTVAL,'$row.getColumn('B')','$row.getColumn('C')',($subqueryA));
+#*	*##end
+#end
+-- Segundo Parseo
+#parse('vm/prueba_import.vm')
+-- @End $timer.elapsedTimeMessage()

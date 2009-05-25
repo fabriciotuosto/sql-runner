@@ -1,0 +1,10 @@
+#*
+Comentario en multiples lienas para documentar que meirda hace esto
+*##foreach($row in $repository.getSheet('Sheet2').getRows())
+#*	*##if ($row.getColumn('G').equalsIgnoreCase('Si'))## Comentario en una sola linea
+#*		*##set ($subqueryA = "SELECT P_ID FROM T_LOCAL WHERE A_NOMBRE ='$row.getColumn('A')'")
+#*		*#INSERT INTO T_ESPECIA (P_ID,A_NOMBRE,A_DESCRIPCION) VALUES (S_ESCPECIAS.NEXTVAL,'$row.getColumn('E')','$row.getColumn('F')',($subqueryA));
+#*		*##parse('vm/prueba_contexto.vm')
+
+#*	*##end
+#end

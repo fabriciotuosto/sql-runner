@@ -9,9 +9,10 @@ import org.apache.commons.dbutils.DbUtils;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import com.google.inject.Singleton;
 import com.google.inject.name.Named;
 
-
+@Singleton
 public class DataSourceProvider implements Provider<DataSource>{
 
 	private final DataSource dataSource;

@@ -3,6 +3,8 @@ package org.sql.runner.guice;
 import static com.google.inject.matcher.Matchers.annotatedWith;
 import static com.google.inject.matcher.Matchers.any;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Properties;
 
 import javax.sql.DataSource;
@@ -11,6 +13,8 @@ import org.sql.runner.annotations.PerforamanceLog;
 import org.sql.runner.scripts.interceptors.PerformanceInterceptor;
 
 import com.google.inject.AbstractModule;
+import com.google.inject.Inject;
+import com.google.inject.Provides;
 import com.google.inject.name.Names;
 
 public class ConfigurationModule extends AbstractModule{
@@ -42,6 +46,15 @@ public class ConfigurationModule extends AbstractModule{
 			bindProperties(prop);
 		}catch(Exception e){
 			throw new Error(e);
+		}
+	}
+	
+	@Provides @Inject public Connection getConnection(DataSourceProvider provider)
+	{
+		try {
+			return provider.get().getConnection();
+		} catch (SQLException e) {
+			throw new Error("Cannot create connection",e);
 		}
 	}
 }

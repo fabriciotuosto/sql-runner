@@ -3,7 +3,7 @@
 	-- Borrar asociaciones
 	DELETE FROM T_CONF_PROD_COM_TEMPLATE_DETAL
 	--		INSERCION DE PRODUCTOS COMERCIALES		--
-	<#list repository.getSheet('Producto Comercial').getRows(2) as row>
+	<#list repository.getSheet('Producto Comercial').getRows() as row>
 		<#if row.getColumn('S') == 'Si' >
 			<#assign subquery_producto_tecnico = "SELECT p_id FROM t_producto_tecnico_papel WHERE A_DESCRIPCION = '${row.getColumn('I')}'" >
 			<#assign subquery_tipo_operacion = "SELECT p_id FROM T_TIPO_OPERACION_COMERCIAL WHERE upper(A_DESCRIPCION) = upper('${row.getColumn('K')}')" >

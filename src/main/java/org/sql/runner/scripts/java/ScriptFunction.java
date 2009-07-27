@@ -6,7 +6,7 @@ import org.excel4j.ExcelRow;
 
 import com.google.inject.ImplementedBy;
 
-@ImplementedBy(ProductoComercialFunction.class)
+@ImplementedBy(TwoIterationsTest.class)
 public interface ScriptFunction {
 
 	String getSheetName();

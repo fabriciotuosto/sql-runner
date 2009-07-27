@@ -9,7 +9,7 @@ import com.google.inject.Inject;
 
 public class TwoIterationsTest implements ScriptFunction
 {
-	private static final String SHEET_NAME = "Producto Comercial";
+	private static final String SHEET_NAME = "Sheet10";
 	private final ExcelRepository repo;
 	
 	@Inject

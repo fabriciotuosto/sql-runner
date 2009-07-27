@@ -66,11 +66,12 @@
 			<artifactId>commons-io</artifactId>
 			<version>1.4</version>
 		</dependency>
+		<!-- 
 		<dependency>
 			<groupId>org.excel4j</groupId>
 			<artifactId>excel4j</artifactId>
 			<version>1.0</version>
-		</dependency>
+		</dependency>  -->
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
 			<artifactId>velocity</artifactId>

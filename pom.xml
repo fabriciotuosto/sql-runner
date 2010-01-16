@@ -6,29 +6,7 @@
 	<artifactId>sql-runner</artifactId>
 	<packaging>jar</packaging>
 	<name>sql-runner</name>
-	<version>1.0.0.0-SNAPSHOT</version>
-	<scm>
-		<connection>scm:svn:http://elendir.dyndns.org/usvn/svn/utilities/</connection>
-		<developerConnection>scm:svn:http://elendir.dyndns.org/usvn/svn/utilities/trunk/SQLRunner/</developerConnection>
-		<url>http://elendir.dyndns.org/viewvc/trunk/SQLRunner/</url>
-	</scm>
-	<ciManagement>
-		<system>Hudson</system>
-		<url>http://elendir.dyndns.org/hudson/</url>
-		<notifiers>
-			<notifier>
-				<type>mail</type>
-				<address>fabricio.tuosto@gmail.com</address>
-			</notifier>
-		</notifiers>
-	</ciManagement>
-
-	<distributionManagement>
-		<site>
-			<id>apache</id>
-			<url>scp://elendir.dyndns.org:443/var/www/docs/project/</url>
-		</site>
-	</distributionManagement>
+	<version>0.0.3-SNAPSHOT</version>
 
 	<dependencies>
 		<dependency>
